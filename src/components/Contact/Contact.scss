@@ -1,0 +1,84 @@
+@import '../../theme/variables.scss';
+
+.contact {
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+
+  .title {
+    font-size: 5.5em;
+    font-family: Druk Wide;
+    color: $gray-light;
+    margin-bottom: 86px;
+  }
+
+  .form {
+    .line {
+      text-align: left;
+      input {
+        padding: 40px;
+        background-color: $gray-light;
+        border: 0;
+        font-size: 1em;
+        width: calc(100% - 80px);
+        &:first-of-type {
+          margin-bottom: 30px;
+        }
+
+        border: 4px solid transparent;
+        &:active,
+        &:focus {
+          border: 4px solid $blue;
+          outline: none;
+          color: $blue;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        display: flex;
+        input {
+          width: initial;
+          flex-grow: 1;
+
+          &:first-of-type {
+            margin-right: 15px;
+            margin-bottom: 0;
+          }
+          &:last-of-type {
+            margin-left: 15px;
+          }
+        }
+      }
+      margin-bottom: 30px;
+
+    }
+    textarea.commentInput {
+      padding: 40px;
+      background-color: $gray-light;
+      width: calc(100% - 80px);
+      font-size: 1em;
+      border: 4px solid transparent;
+      &:active,
+      &:focus {
+        border: 4px solid $blue;
+        outline: none;
+        color: $blue;
+      }
+    }
+    .sendBtn {
+      font-size: 10vw;
+      @media (min-width: 768px) {
+        font-size: 5em;
+      }
+      font-weight: 700;
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 40px;
+
+      @media(min-width: 768px) {
+        margin-top: 100px;
+        margin-bottom: -50px;
+      }
+    }
+  }
+}

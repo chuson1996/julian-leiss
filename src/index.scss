@@ -1,0 +1,76 @@
+@import './theme/variables.scss';
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Karla, sans-serif;
+}
+
+input, p {
+  font-family: Karla, sans-serif;
+}
+
+:global(.lead) {
+  font-size: 1.9em;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #0001FB;
+}
+
+h1, h2, h3 {
+  font-family: Druk Wide;
+}
+
+:global(.container) {
+  padding: 30px;
+  width: calc(100vw - 60px);
+  @media (min-width: 768px) {
+    padding: 200px;
+    width: calc(100vw - 400px);
+  }
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1440px) {
+    max-width: 1100px;
+  }
+
+}
+:global(.title) {
+  margin-left: -200px;
+  margin-right: -200px;
+  font-family: Druk Wide;
+  color: #DCDCE4;
+  margin-bottom: 86px;
+  font-size: 7vw;
+  @media (min-width: 768px) {
+    font-size: 5em;
+  }
+}
+
+:global(.hidden-xs) {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+:global(.visible-xs) {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+:global(.copyrightText) {
+  font-family: 'Lucida Grande';
+  text-align: center;
+  color: $gray;
+}

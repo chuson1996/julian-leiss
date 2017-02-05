@@ -1,0 +1,91 @@
+@import '../../theme/variables.scss';
+
+.aboutMe {
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  @media (min-width: 768px) {
+    padding-top: 200px;
+  }
+
+  .title {
+    z-index: -1;
+  }
+  .cards {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    .card {
+      display: inline-block;
+      vertical-align: top;
+      @media (max-width: 767px) {
+        transform: none !important;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .card1 {
+      color: $gray;
+      text-align: left;
+      width: 54vw;
+      order: 3;
+      margin-top: -100px;
+      z-index: 1;
+    }
+    .card2 {
+      order: 1;
+      img {
+        width: 200px;
+      }
+    }
+    .card3 {
+      order: 2;
+      text-align: right;
+      margin-top: -40px;
+    }
+    .card4 {
+      order: 4;
+      margin-top: -230px;
+      text-align: right;
+      img {
+        width: 145px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      .card1 {
+        margin-top: 35px;
+        order: 1;
+        width: 31%;
+        margin-right: 30px;
+      }
+      .card2 {
+        width: 31%;
+        margin-right: 50px;
+        order: 2;
+        img {
+          width: 100%;
+        }
+      }
+      .card3 {
+        margin-top: 105px;
+        order: 3;
+      }
+      .card4 {
+        margin-top: 205px;
+        margin-left: -72px;
+        order: 4;
+      }
+    }
+  }
+
+  .intro {
+    margin-top: 130px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}
