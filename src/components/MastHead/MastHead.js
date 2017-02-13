@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Parallax } from 'react-parallax';
 import { Motion, spring } from 'react-motion';
 import c from 'classnames';
 
@@ -39,15 +38,19 @@ export default class ComponentName extends Component {
       <Motion style={background}>
       {({ y }) =>
         <div className={s.mastHead} style={{
-          backgroundImage: `url(${require('../../assets/Hero.png')})`,
+          backgroundImage: `url(${require('./Hero.png')})`,
           backgroundPosition: `center ${y}px`
         }}>
           <div className={s.heroContainer}>
-            <h1 className={c(s.title, 'title')}>
+            <img className={s.title} src={require('./Logo-Waving.gif')} alt=""/>
+            {/* <h1 className={c(s.title, 'title')}>
               JULIAN LEISS
-            </h1>
+            </h1> */}
           </div>
-          <div className={s.bottomBar}>
+          <div
+            className={s.bottomBar}
+            onClick={() => document.getElementById('aboutMeMark')
+              .scrollIntoView({ behavior: 'smooth' })}>
             <p>View my work</p>
             <svg width="31px" height="11px" viewBox="-1 0 31 11">
               <g id="arrow-down" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(1.000000, 1.000000)" strokeLinecap="square">

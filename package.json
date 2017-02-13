@@ -27,6 +27,7 @@
     "file-loader": "0.9.0",
     "filesize": "3.3.0",
     "fs-extra": "0.30.0",
+    "gh-pages": "^0.12.0",
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.2",
@@ -57,12 +58,15 @@
     "react-parallax": "^1.2.2",
     "react-waypoint": "^5.0.3",
     "sass-loader": "^4.1.1",
+    "smoothscroll-polyfill": "^0.3.4",
     "styled-components": "^1.4.2"
   },
+  "homepage": "http://chuson1996.github.io/julian-leiss",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build&& ./node_modules/gh-pages/bin/gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [

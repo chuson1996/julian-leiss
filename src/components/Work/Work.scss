@@ -4,15 +4,40 @@
   width: 100vw;
   min-height: 100vh;
   text-align: center;
+
+  .title {
+    z-index: -1;
+    margin-bottom: 40px;
+    opacity: 1;
+    @media (min-width: 768px) {
+      opacity: 0;
+    }
+  }
+
   @media (min-width: 768px) {
     :global(.container) {
       padding-bottom: 0;
-      margin-bottom: -80vh;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: -58vw;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: -78vw;
+  }
+
+  @media (max-width: 767px) {
+    .viewMore {
+      transform: none !important;
     }
   }
 
   .designs {
     position: relative;
+    pointer-events: none;
+
     .design {
       display: block;
       margin-left: auto;
@@ -20,6 +45,7 @@
       position: relative;
       width: 100%;
       margin-bottom: 32px;
+      pointer-events: auto;
       @media (max-width: 767px) {
         transform: none !important;
       }
@@ -67,7 +93,6 @@
       }
 
       @media (min-width: 768px) {
-        // margin-bottom: 100px;
         &.design1 {
           z-index: 3;
           width: 60%;
@@ -75,38 +100,32 @@
         &.design2 {
           width: 28%;
           margin-left: 0;
-          // margin-top: -60px;
           margin-top: -6vw;
           z-index: 2;
         }
         &.design3 {
           margin-right: 0;
-          // margin-top: -220px;
           margin-top: -21vw;
           width: 66%;
         }
         &.design4 {
-          // margin-top: -10px;
           margin-top: -1vw;
           margin-left: 0;
           width: 53%;
         }
         &.design5 {
-          // margin-top: -220px;
           margin-right: 0;
           z-index: 2;
           width: 29%;
           margin-top: -21vw;
         }
         &.design6 {
-          // margin-top: -100px;
           margin-top: -9vw;
           width: 58%;
           z-index: 1;
         }
         &.design7 {
           margin-right: 0;
-          // margin-top: -130px;
           margin-top: -12vw;
           width: 29%;
           z-index: 1;
@@ -114,14 +133,12 @@
         &.design8 {
           margin-left: 0;
           width: 45%;
-          // margin-top: -150px;
           margin-top: -15vw;
           z-index: 1;
         }
         &.design9 {
           width: 58%;
           margin-right: 0;
-          // margin-top: -140px;
           margin-top: -13vw;
         }
       }

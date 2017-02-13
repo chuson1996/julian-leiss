@@ -5,16 +5,29 @@
   min-height: 100vh;
   text-align: center;
   @media (min-width: 768px) {
-    padding-top: 200px;
+    padding-top: 100px;
+  }
+
+  .badge {
+    position: absolute;
+    right: 0;
+    width: 7vw;
+    transform: translate(50%, -50%);
   }
 
   .title {
     z-index: -1;
+    margin-bottom: 40px;
+    opacity: 1;
+    @media (min-width: 768px) {
+      opacity: 0;
+    }
   }
   .cards {
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin-bottom: 620px;
     .card {
       display: inline-block;
       vertical-align: top;
@@ -26,59 +39,98 @@
       }
     }
 
-    .card1 {
+    .cardMap {
       color: $gray;
       text-align: left;
       width: 54vw;
-      order: 3;
-      margin-top: -100px;
+      order: 2;
       z-index: 1;
+      margin-top: 300px;
     }
-    .card2 {
+    .cardProfile {
       order: 1;
       img {
-        width: 200px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     }
-    .card3 {
-      order: 2;
+    .cardPantone {
       text-align: right;
-      margin-top: -40px;
+      margin-top: -160px;
     }
-    .card4 {
-      order: 4;
-      margin-top: -230px;
-      text-align: right;
+    .cardPlant {
+      text-align: left;
+      z-index: 3;
       img {
         width: 145px;
       }
     }
+    .cardPlaylist {
+      order: 3;
+      margin-top: -45px;
+      text-align: right;
+      z-index: 2;
+      img.cardImage {
+        width: 70%;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      & + .row {
+        margin-top: -910px;
+      }
+    }
 
     @media (min-width: 768px) {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      .card1 {
-        margin-top: 35px;
-        order: 1;
-        width: 31%;
-        margin-right: 30px;
+      margin-bottom: 0;
+      flex-direction: column;
+      .row {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & + .row {
+          margin-top: -88px;
+        }
       }
-      .card2 {
-        width: 31%;
-        margin-right: 50px;
+      .cardMap {
+        margin-top: 35px;
+        width: 40%;
+        margin-right: 30px;
+        order: 1;
+      }
+      .cardProfile {
+        width: 56%;
+        margin-right: 30px;
         order: 2;
         img {
           width: 100%;
         }
       }
-      .card3 {
-        margin-top: 105px;
-        order: 3;
+      .cardPantone {
+        margin-top: 0;
+        margin-right: 14%;
+        z-index: -1;
       }
-      .card4 {
-        margin-top: 205px;
-        margin-left: -72px;
-        order: 4;
+      .cardPlant {
+        text-align: right;
+        margin-left: 15%;
+        z-index: 1;
+      }
+      .cardPlaylist {
+        order: 3;
+        margin-top: 80px;
+        z-index: initial;
+        img.cardImage {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
   }
